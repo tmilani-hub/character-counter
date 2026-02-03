@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+	--Neutral-900: rgba(18, 19, 26, 1);
+	--Neutral-800: rgba(33, 34, 44, 1);
+	--Neutral-700: rgba(42, 43, 55, 1);
+	--Neutral-600: rgba(64, 66, 84, 1);
+	--Neutral-200: rgba(228, 228, 239, 1);
+	--Neutral-100: rgba(242, 242, 247, 1);
+	--Neutral-0: rgba(255, 255, 255, 1);
+	--purple-400: rgba(211, 160, 250, 1);
+	--purple-500: rgba(194, 124, 248, 1);
+	--Yellow-500: rgba(255, 159, 0, 1);
+	--Orange-500: rgba(254, 129, 89, 1);
+	--Orange-800: rgba(218, 55, 1, 1);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "DM Sans", sans-serif;
+}
+
+.none {
+	display: none;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--Neutral-200);
+}
+
+h1 {
+	color: var(--Neutral-100);
+}
+
+h4 {
+	color: var(--Neutral-200);
+}
+
+body {
+	padding: 24px 12px;
+	background-image: url(assets/fond.png);
+	background-color: var(--Neutral-900);
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: start;
+	gap: 20px;
+	text-align: center;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+}
+
+.button-menu-réglage {
+	padding: 6px;
+	border-radius: 6px;
+	background-color: var(--Neutral-700);
+	border: 1px solid var(--Neutral-700);
+}
+
+#text-zone {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: start;
+	gap: 20px;
+}
+
+#text-area-unique {
+	height: 160px;
+	resize: none;
+	padding: 12px;
+	border-radius: 12px;
+	background-color: var(--Neutral-800);
+	border: 3px solid var(--Neutral-700);
+	color: var(--Neutral-200);
+}
+
+#text-area-unique::placeholder {
+	color: var(--Neutral-100);
+}
+
+#child-of-text-zone {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: start;
+	gap: 12px;
+}
+
+.reform {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.checkbox {
+	background: none;
+	width: 16px;
+	height: 16px;
+	border-radius: 12px;
+}
+
+.in-number {
+	width: 30%;
+	border: none;
+	border-radius: 12px;
+	height: 14px;
+	padding: 4px;
+	background-color: var(--Neutral-600);
+	color: var(--Neutral-200);
+}
+
+.in-number::placeholder {
+	color: var(--Neutral-100);
+}
+
+#information {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	align-items: stretch;
+	justify-content: stretch;
+	gap: 20px;
+	width: 100%;
+}
+
+.info {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	border-radius: 12px;
+}
+
+#total-cards-parent {
+	background-color: var(--purple-400);
+}
+#word-count-parent {
+	background-color: var(--Yellow-500);
+}
+#sentence-count-parent {
+	background-color: var(--Orange-500);
+}
+
+.reform-2 {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 16px;
+	color: var(--Neutral-900);
+}
+
+.reform-2 h2 {
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.reform-2 h3 {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+#letter-counting-hard {
+	color: var(--Neutral-200);
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: start;
+	gap: 20px;
+}
+
+.letter {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-between;
+}
+
+.cent {
+	width: 65%;
+	background-color: var(--Neutral-800);
+	border-radius: 12px;
+	display: flex;
+	align-items: stretch;
+	justify-content: start;
+}
+
+.zero {
+	width: 65%;
+	background-color: var(--purple-400);
+	border-radius: 12px;
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		padding: 24px;
+	}
+
+	h4 {
+		font-size: 26px;
+	}
+
+	h1 {
+		margin: 32px 64px;
+		font-size: 64px;
+		text-align: center;
+	}
+
+	#child-of-text-zone {
+		display: grid;
+		grid-template-columns: 1fr 1fr 2fr;
+		text-align: end;
+		margin-bottom: 24px;
+	}
+
+	#information {
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		justify-content: stretch;
+		align-items: stretch;
+		justify-items: stretch;
+		align-content: stretch;
+	}
+
+	.reform-2 {
+		padding: 0;
+	}
+
+	.reform-2 h2 {
+		font-size: 64px;
+		font-weight: 700;
+	}
+}
