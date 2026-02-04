@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Counting Letter</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
@@ -47,7 +47,10 @@
 		</header>
 		<h1>Analyze your text in real-time.</h1>
 		<section id="text-zone">
-			<textarea id="text-area-unique"></textarea>
+			<label class="reform-0">
+				<textarea id="text-area-unique"></textarea>
+				<p id="p" class="none"></p>
+			</label>
 			<section id="child-of-text-zone">
 				<label class="reform">
 					<input id="no-space" class="checkbox" type="checkbox" />
@@ -60,7 +63,6 @@
 						id="Limit"
 						class="in-number none"
 						type="number"
-						placeholder="only number"
 					/>
 				</label>
 				<p>Approx. reading time: 0 minute</p>
@@ -68,11 +70,10 @@
 		</section>
 		<section id="information">
 			<section class="info" id="total-cards-parent">
-				<div class="reform-2">
-					<h2 id="total-cards"></h2>
-					<h3>Total Characters</h3>
-				</div>
+				<h2 id="total-cards"></h2>
+				<h3>Total Characters</h3>
 				<svg
+					class="absolute"
 					width="100"
 					height="130"
 					viewBox="0 0 100 130"
@@ -88,12 +89,10 @@
 				</svg>
 			</section>
 			<section class="info" id="word-count-parent">
-				<div class="reform-2">
-					<p></p>
-					<h2 id="word-count"></h2>
-					<h3>Word Count</h3>
-				</div>
+				<h2 id="word-count"></h2>
+				<h3>Word Count</h3>
 				<svg
+					class="absolute"
 					width="100"
 					height="130"
 					viewBox="0 0 100 130"
@@ -109,11 +108,10 @@
 				</svg>
 			</section>
 			<section class="info" id="sentence-count-parent">
-				<div class="reform-2">
-					<h2 id="sentence-count"></h2>
-					<h3>Sentence Count</h3>
-				</div>
+				<h2 id="sentence-count"></h2>
+				<h3>Sentence Count</h3>
 				<svg
+					class="absolute"
 					width="100"
 					height="130"
 					viewBox="0 0 100 130"
@@ -132,32 +130,10 @@
 		<section id="letter-counting-hard">
 			<h3>Letter Density</h3>
 			<section id="foure-tout">
-				<div class="letter">
-					<p>E</p>
-					<div class="cent"><div class="zero"></div></div>
-					<p><span>40</span> <span>(16.06%)</span></p>
-				</div>
 				<details>
 					<summary>
 						See more
-						<svg
-							width="11"
-							height="7"
-							viewBox="0 0 11 7"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M4.78125 5.875L0.15625 1.28125C0 1.15625 0 0.90625 0.15625 0.75L0.78125 0.15625C0.9375 0 1.15625 0 1.3125 0.15625L5.0625 3.84375L8.78125 0.15625C8.9375 0 9.1875 0 9.3125 0.15625L9.9375 0.75C10.0938 0.90625 10.0938 1.15625 9.9375 1.28125L5.3125 5.875C5.15625 6.03125 4.9375 6.03125 4.78125 5.875Z"
-								fill="#E4E4EF"
-							/>
-						</svg>
 					</summary>
-					<div class="letter">
-						<p>E</p>
-						<div class="cent"><div class="zero"></div></div>
-						<p><span>40</span> <span>(16.06%)</span></p>
-					</div>
 				</details>
 			</section>
 		</section>
