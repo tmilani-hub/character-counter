@@ -1,5 +1,77 @@
 // all table
-const maj = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9","É","é","ç","Ç","à","À","ù","Ù",undefined];
+const maj = [
+	"A",
+	"B",
+	"C",
+	"D",
+	"E",
+	"F",
+	"G",
+	"H",
+	"I",
+	"J",
+	"K",
+	"L",
+	"M",
+	"N",
+	"O",
+	"P",
+	"Q",
+	"R",
+	"S",
+	"T",
+	"U",
+	"V",
+	"W",
+	"X",
+	"Y",
+	"Z",
+	"a",
+	"b",
+	"c",
+	"d",
+	"e",
+	"f",
+	"g",
+	"h",
+	"i",
+	"j",
+	"k",
+	"l",
+	"m",
+	"n",
+	"o",
+	"p",
+	"q",
+	"r",
+	"s",
+	"t",
+	"u",
+	"v",
+	"w",
+	"x",
+	"y",
+	"z",
+	"0",
+	"1",
+	"2",
+	"3",
+	"4",
+	"5",
+	"6",
+	"7",
+	"8",
+	"9",
+	"É",
+	"é",
+	"ç",
+	"Ç",
+	"à",
+	"À",
+	"ù",
+	"Ù",
+	undefined,
+];
 const spaceword = [" ", ".", "?", "!", "'", ",", "(", ")"];
 const point = [".", "?", "!"];
 let letter_unique_count = [];
@@ -77,16 +149,17 @@ function create_letter_cards(newLetter) {
 	const $SP_letter_forcent = document.createElement("p");
 	let total = 0;
 	for (let i = 0; i < $TextArea.value.length; i++) {
-		$TextArea.value[i] == newLetter ? total++ : total = total;
+		$TextArea.value[i] == newLetter ? total++ : (total = total);
 	}
-	let result = (total / $TextArea.value.length) * 100
+	let result = (total / $TextArea.value.length) * 100;
 	$SP_letter_total.textContent = total;
-	$SP_letter_forcent.textContent = "(" + Math.round(result * 100) / 100 + "%" + ")";
+	$SP_letter_forcent.textContent =
+		"(" + Math.round(result * 100) / 100 + "%" + ")";
 	$letter.textContent = newLetter;
 	$cards.classList.add("letter");
 	$cent.classList.add("cent");
 	$zero.classList.add("zero");
-	$zero.style.width = Math.round(result) + "%"
+	$zero.style.width = Math.round(result) + "%";
 	$cent.appendChild($zero);
 	$cards.appendChild($letter);
 	$cards.appendChild($cent);
@@ -136,8 +209,8 @@ window.addEventListener("load", () => {
 	$sentenceCountH4.textContent = allsentence;
 });
 $TextArea.addEventListener("input", () => {
-	for (let i = 0; i < letter_unique_count.length ; i++) {
-		letter_unique_count[i].remove()
+	for (let i = 0; i < letter_unique_count.length; i++) {
+		letter_unique_count[i].remove();
 	}
 	letter_unique_count = [];
 	let letter = [];
@@ -157,11 +230,13 @@ $TextArea.addEventListener("input", () => {
 	} else {
 		$pErrorLimit.classList.add("none");
 	}
-	for (let i = 0; i < text.length ; i++) {
+	for (let i = 0; i < text.length; i++) {
 		if (maj.includes(text[i]) && letter.includes(text[i]) !== true) {
 			const $card = create_letter_cards(text[i]);
 			letter_unique_count.push($card);
-			letter_unique_count.length > 5 ? $foure_tout_back.appendChild($card) : $foure_tout.prepend($card);
+			letter_unique_count.length > 5
+				? $foure_tout_back.prepend($card)
+				: $foure_tout.prepend($card);
 			letter.push(text[i]);
 		}
 	}
